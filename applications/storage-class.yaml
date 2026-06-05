@@ -3,12 +3,13 @@ kind: Application
 metadata:
   name: namespace
   namespace: argocd
+  
 spec:
   project: default
   source:
     repoURL: https://github.com/MamidalaHemanChandra/eks-argocd.git
     targetRevision: main
-    path: namespaces
+    path: storage-classes
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
